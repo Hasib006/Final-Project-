@@ -1,15 +1,41 @@
 
 * {
     font-family: 'Inter', system-ui;
-    
-    .row {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
 
+    a {
+        font-size: 0.875rem;
+    }
+    
 }
 
-.nigga {
-    color: black;
+/* NAVIGATION */
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+
+.website__name {
+    display: flex;
+    align-items: center;
+    width: 24px;
+    font-weight: bold;
+}
+
+.img__logo {
+    width: 24px;
+    padding: 0 12px 0 0 ;
+}
+
+/*
+.nav__container {
+    text-decoration: none;
 }
