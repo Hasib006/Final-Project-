@@ -1,14 +1,33 @@
 
 * {
     font-family: 'Inter', system-ui;
+}
 
-    a {
-        font-size: 0.875rem;
-    }
-    
+a {
+    font-size: 0.875rem;
+    text-decoration: none;
+    color: #243E63;
+    font-weight: bold;
+    margin: 0px 1.5rem;
+    padding-bottom: 0.25rem;
+    transition: all 300ms ease;
+}
+
+a:hover {
+    color: #6415FF ;
+    padding-bottom: 0.25rem;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+}
+
+
+#root {
+   /* padding: 32px; */ (unpause it when done !!!)
 }
 
 /* NAVIGATION */
+
+
 
 .row {
     width: 100%;
@@ -21,21 +40,40 @@ nav {
     justify-content: space-between;
     align-items: center;
     text-decoration: none;
+    font-size: 0.875rem;
 }
 
 .website__name {
     display: flex;
     align-items: center;
-    width: 24px;
-    font-weight: bold;
+    font-size: 1.5rem !important;
+    margin-left: 0px !important;
+    text-decoration: none !important;
 }
+
+
+
 
 .img__logo {
-    width: 24px;
+    width: 1.5rem;
     padding: 0 12px 0 0 ;
+    width: 2.5rem;
 }
 
-/*
-.nav__container {
-    text-decoration: none;
+
+
+.nav__link {
+
+}
+
+.nav__link--login {
+    margin: 0px 24px 0px 48px;
+}
+
+.nav__link--primary {
+    padding: 0.75rem 2rem;
+    background-color: #6415FF;
+    color: white;
+    border-bottom-width: 0px;
+    border-radius: 9999px;
 }
