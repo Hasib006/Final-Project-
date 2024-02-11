@@ -3,6 +3,10 @@
     font-family: 'Inter', system-ui;
 }
 
+p{
+    width: 100%;
+}
+
 a {
     font-size: 0.875rem;
     text-decoration: none;
@@ -18,6 +22,22 @@ a:hover {
     padding-bottom: 0.25rem;
     text-decoration: underline;
     text-underline-offset: 0.5rem;
+}
+
+.nav__link--primary:hover {
+    background-color: rgb(80 17 204);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+
+
+
+
+.purple {
+    color: #6415FF;
 }
 
 
@@ -52,8 +72,6 @@ nav {
 }
 
 
-
-
 .img__logo {
     width: 1.5rem;
     padding: 0 12px 0 0 ;
@@ -61,19 +79,130 @@ nav {
 }
 
 
-
-.nav__link {
-
-}
-
 .nav__link--login {
     margin: 0px 24px 0px 48px;
 }
 
 .nav__link--primary {
-    padding: 0.75rem 2rem;
+    padding: 0.75rem 2rem !important;
     background-color: #6415FF;
-    color: white;
+    color: white !important;
     border-bottom-width: 0px;
     border-radius: 9999px;
+    margin: 0;
+    text-decoration: none !important;
 }
+
+.column__container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 96px 0px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.column__left {
+    width: 40%;
+}
+
+.home-page__subtitle {
+   margin: 2rem 0px;
+   font-size: 1.125rem;
+   line-height: 1.5;
+}
+
+.email__container {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+
+input {
+    font-size: 16px;
+    width: 100%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    padding-right: 12rem;
+    padding-left: 2rem;
+    border-radius: 9999px;
+    border: 2px solid rgb(226, 232, 240) ;
+    transition: all 300ms ease;
+}
+
+input:hover {
+   border-color: rgb(160 174 192); 
+}
+
+input:focus {
+    border-color: rgb(100 21 255);
+    outline: transparent solid 0px;
+    outline-offset: 0px;
+}
+
+
+button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    font-size: 16px;
+    margin: 8px 8px 8px 0px;
+    padding: 16px 0px;
+    border-radius: 9999px;
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6415FF;
+    color: white;
+    font-weight: bold;
+    border: none;
+    transition: all 300ms ease;
+}
+
+button:hover {
+    background-color: rgb(80 17 204);
+    cursor: pointer;
+}
+
+
+.ad-logo__container {
+    margin-top: 80px;
+    color: #a0aec0;
+}
+
+.company__title {
+    margin: 0;
+    font-size: 12px;
+}
+
+.logo__stamps {
+    margin-top: 16px;
+    padding-right: 128px;
+    width: 100%;
+    opacity: 0.5;
+}
+
+.column__right {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.img__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.home__page--img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
