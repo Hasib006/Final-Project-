@@ -3,6 +3,11 @@
     font-family: 'Inter', system-ui;
     border-style: solid;
     border-width: 0px;
+    box-sizing: border-box;
+}
+
+ul:hover{
+  color: none;
 }
 
 p{
@@ -75,9 +80,8 @@ nav {
 
 
 .img__logo {
-    width: 1.5rem;
     padding: 0 12px 0 0 ;
-    width: 2.5rem;
+    width: 3.5rem;
 }
 
 
@@ -920,7 +924,7 @@ width: calc(100%/ 3)
   margin: 92px 0px;
   display: flex;
   flex-direction: row;
-  background-color: lightpink;
+  background-color:#6415FF;
   justify-content: center;
   border-radius: 8px
 }
@@ -941,6 +945,7 @@ width: calc(100%/ 3)
 .blog__para {
   font-size: 30px;
   margin: 0;
+  color: #f7fafc;
 }
 
 .blog__container--right {
@@ -951,13 +956,86 @@ width: calc(100%/ 3)
   padding: 20px 40px;
   margin-right: 32px;
   border-radius: 999px;
+  background-color: #f56565;
+  font-size: 16px;
+  color: #f7fafc;
+  font-weight: 700;
+  transition: all 400ms ease;
 }
 
 .contact-us__button{
   padding: 20px 40px;
-  margin-right: 32px;
   border-radius: 999px;
+  background-color: #6415FF;
+  border: 1px solid rgb(160 174 192);
+  font-size: 16px;
+  color: #f7fafc;
+  font-weight: 700;
+  transition: all 400ms ease;
 }
 
+.get__started--button-2:hover {
+  background-color: rgb(229 62 62);
+}
 
+.contact-us__button:hover{
+  background-color: rgb(247 250 252);
+  color: #6415FF;
+}
 
+  /* FOOTER */
+
+  .footer__container {
+    padding: 92px 36px;
+    margin: 0px -36px;
+    background-color: hsl(260, 100%, 54%);
+    color: white;
+  }
+
+  .footer__features--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer__top{
+    
+  }
+
+  .footer__columns{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer__column {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .column__heading{
+    color: #f7fafc;
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .column__features {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0;
+    text-align: left;
+  }
+
+  /* FOOTER__LINK AND FOOTER__LINK--FEATURE */
+
+  .footer__link {
+    color: #f7fafc;
+    font-weight: 300;
+    margin: 0;
+  }
+
+  
