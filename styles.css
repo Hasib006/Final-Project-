@@ -6,6 +6,27 @@
     box-sizing: border-box;
 }
 
+/* @keyframes transitionRight {
+  0% {
+    transform: translate(-100%);
+  }
+
+  100% {
+    transform: translate(0%);
+  }
+}
+
+@keyframes transitionLeft {
+  0% {
+    transform: translate(100%);
+  }
+
+  100% {
+    transform: translate(0%);
+  }
+} */
+
+
 ul:hover{
   color: none;
 }
@@ -24,24 +45,18 @@ a {
     color: #243E63;
     font-weight: bold;
     padding-bottom: 0.25rem;
-    transition-duration: 300ms;
+    transition-duration: 400ms;
+    border-bottom-width: 1px;
+    border-color: transparent;
 }
 
 a:hover {
     color: #6415FF ;
     padding-bottom: 0.25rem;
-    text-decoration: underline;
-    text-underline-offset: 0.5rem;
-    transition-duration: 2ms;
+    border-color: #6415FF  ;
 }
 
-.nav__link {
-  margin: 0px 1.5rem;
-}
 
-.nav__link--primary:hover {
-    background-color: rgb(80 17 204);
-}
 
 h1 {
     font-size: 3rem;
@@ -53,7 +68,7 @@ h1 {
 
 
 #root {
-   /* padding: 32px; */ (unpause it when done !!!)
+   padding: 32px; (unpause it when done !!!)
 }
 
 /* NAVIGATION */
@@ -72,14 +87,17 @@ nav {
     align-items: center;
     text-decoration: none;
     font-size: 0.875rem;
+    animation: transitionRight 700ms;
 }
+
+
 
 .website__name {
     display: flex;
     align-items: center;
     font-size: 1.5rem !important;
     margin-left: 0px !important;
-    text-decoration: none !important;
+    border: none;
 }
 
 
@@ -88,6 +106,9 @@ nav {
     width: 3.5rem;
 }
 
+.nav__link {
+  margin: 0px 1.5rem;
+}
 
 .nav__link--login {
     margin: 0px 24px 0px 48px;
@@ -103,6 +124,10 @@ nav {
     text-decoration: none !important;
 }
 
+.nav__link--primary:hover {
+  background-color: rgb(80 17 204);
+}
+
 .column__container {
     width: 100%;
     display: flex;
@@ -110,6 +135,7 @@ nav {
     padding: 96px 0px;
     align-items: center;
     justify-content: space-between;
+    animation: transitionRight 700ms;
 }
 
 .column__left {
@@ -219,8 +245,9 @@ input:focus {
 
 
 .home__page--img {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    max-width: 48rem;
+    min-width: 0px;
 }
 
 /* FEATURES */
@@ -231,6 +258,7 @@ input:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: transitionLeft 700ms;
 }
 
 .heading__title{
@@ -320,6 +348,7 @@ width: calc(100%/ 3)
     display: flex;
     flex-direction: row;
     padding: 96px 0px;
+    animation: transitionRight 700ms;
 }
 
 .quality__work--column-left{
@@ -381,6 +410,7 @@ width: calc(100%/ 3)
   .steps__container{
     padding: 96px 0px;
     display: flex;
+    animation: transitionLeft 700ms;
   }
 
   .steps__column--left{
@@ -449,6 +479,7 @@ width: calc(100%/ 3)
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: transitionRight 700ms;
   }
 
   .value__left {
@@ -563,6 +594,7 @@ width: calc(100%/ 3)
 
   .pricing__container{
     padding: 96px 0px;
+    animation: transitionLeft 700ms;
   }
 
   .plans__header{
@@ -783,6 +815,7 @@ width: calc(100%/ 3)
   .testimonail__container {
     display: flex;
     padding: 92px 0px;
+    animation: transitionRight 700ms;
   }
 
   .testimonail__left {
@@ -931,7 +964,8 @@ width: calc(100%/ 3)
   flex-direction: row;
   background-color:#6415FF;
   justify-content: center;
-  border-radius: 8px
+  border-radius: 8px;
+  animation: transitionLeft 700ms;
 }
 
 .blog__row {
@@ -998,7 +1032,7 @@ width: calc(100%/ 3)
     margin: -36px -36px;
     background-color: hsl(260, 100%, 54%);
     color: white;
-    
+    animation: transitionRight 700ms;
   }
 
   .footer__features--container {
@@ -1017,6 +1051,7 @@ width: calc(100%/ 3)
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 0px 42px;
 
   width: 100%;
   }
@@ -1049,7 +1084,6 @@ width: calc(100%/ 3)
     margin-top: 12px;
   }
   
-  /* FIX THIS TRANSITION TO BECOME SMOOTH  */
 
   .footer__link--feature {
     color: #f7fafc !important;
@@ -1057,7 +1091,9 @@ width: calc(100%/ 3)
     transition: all 300ms ease;
   }
 
-  /* FIX THIS TRANSITION TO BECOME SMOOTH  */
+  .footer__link--feature:hover {
+    border-color: #f7fafc;
+  }
 
 
   .footer__break {
@@ -1070,6 +1106,7 @@ width: calc(100%/ 3)
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0px 42px;
   }
 
   .footer__logo {
@@ -1120,6 +1157,148 @@ width: calc(100%/ 3)
   .fa-twitter:hover,
   .fa-youtube:hover {
     background-color: rgb(203 213 224); ;
+  }
+
+  /* Below 1280px  */
+
+  @media (max-width: 1280px) {
+    .home__page--img {
+      max-width: 32rem;
+    }
+  }
+
+  /* Below 1024px  */
+
+  @media (max-width: 1024px){
+    .nav__links {
+      display: none;
+    }
+
+    .column__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+
+    .column__left {
+      max-width: 32rem;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    h1 {
+      margin: 0px;
+      font-size: 28px;
+    }
+
+    .home-page__subtitle {
+      margin-right: 20px 0px;
+    }
+
+    .ad-logo__container {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .company__title {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .logo__stamps {
+      padding: 0;
+    }
+
+    .column__right{
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .home__page--img {
+      margin-top: 32px;
+    }
+
+    .services {
+      width: calc(100% / 2);
+    }
+
+    .quality__heading {
+      font-size: 36px;
+    }
+
+
+    .quality__work--column-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    .value__title {
+      max-width: 80%;
+    }
+
+    .value__para {
+      max-width: 80%;
+    }
+
+    .value__features {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .plans {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .blog__row {
+      display: flex;flex-direction: column;
+      margin: 0;
+    }
+
+    .blog__para {
+      width: 100%;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    .button__container{
+      margin-top: 28px;
+    }
+
+
+  .footer__columns {
+    padding: 0px 42px;
+  } 
+
+  
+
+
+
+
+   
+
+
+
+
+
+
   }
 
 
